@@ -70,7 +70,7 @@ def process_add_to_favourites(message):
         cursor.execute(command2)
         titles = cursor.fetchall()
         if len(titles) > 0:
-            raise NameError('Ошибка')
+            raise NameError('Ошибка, уточните название дорамы')
         DataBase.add_to_favourites(user_id,message.text)
         bot.send_message(message.chat.id, "Дорама успешно добавлена")
     except Exception as e:
