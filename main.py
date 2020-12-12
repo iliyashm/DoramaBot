@@ -66,11 +66,17 @@ def process_add_to_favourites(message):
         connection = DataBase.get_connection()
         cursor = connection.cursor()
         user_id = message.from_user.id
-        command2 = "SELECT name_of_movie FROM Favourites WHERE id_user LIKE '%" + str(user_id) + "%' AND name_of_movie LIKE '%" + message.text + "%'"
+        command2 = "SELECT name_of_movie FROM doramalist WHERE name_of_movie LIKE '%" + message.text + "%'"
+        command3 = "SELECT name_of_movie FROM Favourites WHERE id_user LIKE '%" + str(
+            user_id) + "%' AND name_of_movie LIKE '%" + message.text + "%'"
         cursor.execute(command2)
         titles = cursor.fetchall()
-        if len(titles) > 0:
-            raise NameError('Ошибка, уточните название дорамы')
+        if len(titles) > 1 or len(titles) ==0 :
+            raise NameError('')
+        cursor.execute(command3)
+        existed = cursor.fetchall()
+        if (len(existed) > 0):
+            raise NameError('')
         DataBase.add_to_favourites(user_id,message.text)
         bot.send_message(message.chat.id, "Дорама успешно добавлена")
     except Exception as e:
