@@ -5,3 +5,4 @@
 1. Скопируйте все файлы в свой проект
 2. Загрузите библиотеки mysql-connector,mysql-connector-python и telebot через pip install
 (или через Settings -> Python Interpriter если у вас установлен PyCharm)
+3.Чат бота в телеграм:@DoramalistBot
