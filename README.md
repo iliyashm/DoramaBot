@@ -3,7 +3,8 @@
 # Локальная сборка
 Для того чтобы собрать бота на своем устройстве:
 1. Скопируйте все файлы в свой проект
-2. Загрузите библиотеки mysql-connector,mysql-connector-python и telebot через pip install
+2. Загрузите библиотеки mysql-connector,mysql-connector-python,pyTelegramBotAPI и telebot через pip install
 (или через Settings -> Python Interpriter если у вас установлен PyCharm)
 Чат бота в телеграм:@DoramalistBot
+(Если возникли трудности с библиотекой telebot, то можно попробовать удалить её вместе с pyTelegramBotAPI и переустановить последнюю)
 
