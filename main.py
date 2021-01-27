@@ -4,7 +4,7 @@ import mysql.connector
 import GeneralMessages
 
 
-token = "1195843130:AAGagMN1LxmrOV-eqr_wjIjdoWNIRAzv8h0"
+
 bot = telebot.TeleBot(token)
 
 
