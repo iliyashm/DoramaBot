@@ -4,10 +4,10 @@ import random
 
 def get_connection():
     connection = mysql.connector.connect(
-    host="w1kr9ijlozl9l79i.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
-    user="yp7yybduvtywe6g3",
-    password="q0q7y09jio33vo1o",
-    database="nbtgeuypdgf0lc5g"
+    host="",
+    user="",
+    password="",
+    database=""
     )
     return connection
 
